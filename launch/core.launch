@@ -1,0 +1,66 @@
+<launch>
+  <node pkg="hpcc_robotics" name="hpcc_robotics" type="main" output="screen">
+    <!-- Directory where output files will be stored-->
+    <!-- The files' names are derived from the topics' names -->
+    <param name="output_directory" value="/home/ros/hpcc-output" />
+
+    <!-- GNSS Group -->
+      <!-- When false, topics for this sensor will not be logged -->
+      <param name="gnss/enabled" value="false" />
+      <!-- Comma delimited list of topics broadcasting GPS readings -->
+      <param name="gnss/topics" value="/gps/fix" />
+      <!-- When false, files will not be split into chunks -->
+      <param name="gnss/split" value="false" />
+      <!-- The maximum filesize, in megabytes, of an output file. This has no
+        effect if split is false. Default is 2GiB (2048) -->
+      <param name="gnss/filesize" value="2048" />
+
+    <!-- Image Group -->
+      <param name="image/enabled" value="false" />
+      <param name="image/topics" value="/camera/feed" />
+      <param name="image/split" value="true" />
+      <param name="image/filesize" value="2048" />
+
+    <!-- Laserscan Group -->
+      <param name="laserscan/enabled" value="true" />
+      <param name="laserscan/topics" value="/scan" />
+      <param name="laserscan/split" value="true" />
+      <param name="laserscan/filesize" value="2048" />
+
+    <!-- Odometry Group -->
+      <param name="odometry/enabled" value="false" />
+      <param name="odometry/topics" value="/gps/rtkfix" />
+      <param name="odometry/split" value="false" />
+      <param name="odometry/filesize" value="2048" />
+
+    <!-- IMU Group -->
+      <param name="imu/enabled" value="false" />
+      <param name="imu/topics" value="/imu" />
+      <param name="imu/split" value="true" />
+      <param name="imu/filesize" value="2048" />
+
+    <!-- OccupancyGrid Group -->
+      <param name="occupancygrid/enabled" value="false" />
+      <param name="occupancygrid/topics" value="/map" />
+      <param name="occupancygrid/split" value="true" />
+      <param name="occupancygrid/filesize" value="2048" />
+
+    <!-- Range Group -->
+      <param name="range/enabled" value="false" />
+      <param name="range/topics" value="/ultrasonic" />
+      <param name="range/split" value="true" />
+      <param name="range/filesize" value="2048" />
+
+    <!-- Temperature Group -->
+      <param name="temperature/enabled" value="false" />
+      <param name="temperature/topics" value="/temperature" />
+      <param name="temperature/split" value="true" />
+      <param name="temperature/filesize" value="2048" />
+
+    <!-- CompressedImage Group -->
+      <param name="compressedimage/enabled" value="false" />
+      <param name="compressedimage/topics" value="/camera/compressed" />
+      <param name="compressedimage/split" value="false" />
+      <param name="compressedimage/filesize" value="2048" />
+  </node>
+</launch>
