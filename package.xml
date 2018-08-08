@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>hpcc_robotics</name>
+  <name>hpcc-robotics</name>
   <version>1.0.0</version>
   <description>A package that facilitates the ingestion of data from sensors commonly used in robotics into the HPCC Systems platform</description>
 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(hpcc_robotics)
+project(hpcc-robotics)
 
 # C++14 is the standard for ROS Melodic
 add_compile_options(-std=c++14)

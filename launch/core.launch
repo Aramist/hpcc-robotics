@@ -1,5 +1,5 @@
 <launch>
-  <node pkg="hpcc_robotics" name="hpcc_robotics" type="main" output="screen">
+  <node pkg="hpcc-robotics" name="hpcc_robotics" type="main" output="screen">
     <!-- Directory where output files will be stored-->
     <!-- The files' names are derived from the topics' names -->
     <param name="output_directory" value="/home/ros/hpcc-output" />
